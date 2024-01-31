@@ -2,7 +2,7 @@ import random
 import mysql.connector
 connections=mysql.connector.connect(host="localhost" ,port="3306",user="root",password="123456789", database="project")
 cursor=connections.cursor()
-
+#adding
 def com(num):
     if num<=100 and num>=95:
         return 'both are nice,your lucky person,more care,trust,strong willed,live long,traveling more'
