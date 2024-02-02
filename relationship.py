@@ -27,7 +27,8 @@ def new_data(Fname,Sname):
 print('Percentage between two persons ')
 Fname=input("Enter Your Name=")
 Sname=input("Enter your favourite Person=")
-if (Fname=="" or " ")or(Sname==" " or "")or(Fname+Sname.isalnum() or Fname+Sname.isnumeric()):
+SpecialCharacter={'1','2','3','4','5','6','9','0','!','@','#','%','$','&','(',')','?','/'}
+if Fname==("" or " ")or Sname==(" " or "") or len(SpecialCharacter.intersection(set(Fname+Sname)))>0:
     print("Enter Useful Names So Try Again")
 else:
     cursor.execute("select fname,sname,percentage,comments from relationship where fname=%s and sname=%s",(Fname,Sname))
