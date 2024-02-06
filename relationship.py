@@ -1,7 +1,7 @@
 import random
 import mysql.connector
 connections=mysql.connector.connect(host="localhost" ,port="3306",user="root",password="123456789", database="project")
-cursor=connections.cursor()
+cursor=connections.cursor() 
 #adding
 def com(num):
     if num<=100 and num>=95:
@@ -39,7 +39,7 @@ else:
     if len(listvalues)==0:
         new_data(Fname,Sname)
         print()
-        print("-->{} & {} -->->{}".format(Fname,Sname,per))
+        print("-->{} & {} -->->{}%".format(Fname,Sname,per))
         print("-->{}".format(com(per)))
         print()
     else:
